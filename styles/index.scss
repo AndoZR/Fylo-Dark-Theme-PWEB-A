@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+//  PRIMARY BLUES
+
+//intro and email sign up background
+$darkBlueIntroAndEmail : hsl(217, 28%, 15%);
+//main background
+$darkBlueMain : hsl(218, 28%, 13%);
+//footer background
+$darkBlueFooter : hsl(216, 53%, 9%);
+//testimonials background
+$darkBlue : hsl(219, 30%, 18%);
+
+//hsl(218, 28%, 13%)
+
+// ACCENT 
+
+//inside call-to-action gradient
+$cyan : hsl(176, 68%, 64%);
+//inside call-to-action gradient
+$blue : hsl(198, 60%, 50%);
+//error
+$lightRedError : hsl(0, 100%, 63%);
+
+//White
+$white: #ffffff;
+
+$defaultFontSize: 0.875rem;
+
+// Headings, Call-to-actions, Header Navigation (https://fonts.google.com/specimen/Raleway);
+$family1: "Raleway";
+// Body (https://fonts.google.com/specimen/Open+Sans);
+$family2: "Open Sans";
+$weightSmall: 400;
+$weightLarge:  700;
+
+body{display: none;}
+*{
+    color: $white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $family2;
+}
+.page-container{
+    position: relative;
+    background-color: $darkBlueFooter;
+    .above-underlay{
+        position: absolute;
+
+        width: 100%;
+        background-color: $darkBlueIntroAndEmail;
+    }
+    .img-underlay{
+        position: absolute;
+
+        width: 100%;
+    }
+    .below-underlay{
+        /*BELOW UNDERLAY*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $darkBlueMain;
+    }
+    .page-content{
+        position: relative;
+        max-width: 80rem;
+        width: 100%;
+    }
+}
+.logo{
+    min-width: 5.313rem;
+    width: 100%;
+    max-width: 11.25rem;
+}
+.nav{
+    /*NAV*/
+    a{
+        font-family: $family1;
+        color: $white;
+        text-decoration: none;
+        &:hover{
+            text-decoration:underline;
+            font-weight: bold;
+            color: $white;
+        }
+        &:focus{
+            text-decoration:underline;
+            font-weight: bold;
+            color: $white;
+        }
+    }
+}
+.hero{
+    /*HERO SECTION*/
+    .hero-img{
+        width: 100%;
+        max-width: 45rem;
+        
+    }
+    h1{
+        font-family: $family1;
+        font-weight: 700;
+        max-width: 43.75rem;
+        width: 100%;
+        text-align: center;
+    }
+    p{
+        max-width: 37.5rem;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    button{
+        max-width: 12.5rem;
+        width: 100%;
+        background: linear-gradient(to right, $cyan, $blue);
+        border: 0;
+        border-radius: 3rem;
+        padding: 0.75rem 0;
+        font-family: $family1;
+        font-weight: 700;
+        &:hover{
+            font-weight: bold;
+            background: hsla(176, 68%, 80%);   
+        }
+        &:focus{
+            font-weight: bold;
+            background: hsla(176, 68%, 80%);   
+        }
+    }
+}
+@media (max-width: 576px) {
+    /*HERO MEDIA QUERY*/
+    .hero{
+        h1{
+            max-width: 20rem;
+            font-size: 1.6rem;
+        }
+        p{
+            max-width: 19rem;
+            font-size: 0.9rem;
+        }
+
+    }
+}
+.properties{
+    /*PROPERTIES SECTION*/
+    width: 100%;
+    max-width: 62.5rem
+}
+.property{
+    width: 100%;
+    max-width: 23.75rem;
+    text-align: center;
+    img{
+        max-height: 5.625rem;
+        height: 100%;
+    }
+    h2{
+        font-size: 1.3rem;
+        font-family: $family1;
+        font-weight: 700;
+    }
+    p{
+        font-size: 0.875rem;
+    }
+}
+
+.productive{
+    /*PRODUCTIVE SECTION*/
+    .productive-img{
+            min-width: 19.375rem;
+        img{
+            min-width: 19.375rem;
+            width: 100%;
+            max-width: 38.75rem;
+        }
+    }
+    .productive-text{
+        h2{
+            max-width: 24rem;
+            width: 100%;
+            font-size: 2.25rem;
+            font-family: $family1;
+            font-weight: 700;
+        }
+        p{
+            max-width: 34.375rem;
+            width: 100%;
+        }
+        a{
+            color: $cyan;
+            text-decoration: none;
+            border-bottom: 1px solid $cyan;
+            font-family: $family1;
+            font-weight: 700;
+            img{
+                margin-bottom: 0.15rem;
+            }
+            &:hover{
+                color: $white;
+                border-bottom: 1px solid $white;
+            }
+            &:focus{
+                color: $white;
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+}
+@media (max-width: 762px) {
+    /*MEDIA QUERY*/
+    .productive{
+        .productive-text{
+            h2{
+                font-size: 1.125rem;
+            }
+            p{
+                font-size: 0.875rem;
+            }
+            a{
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+
+.reviews{
+    /*REVIEWS SECTION*/
+    max-width: 72.813rem;
+    width: 100%;
+}
+.review{
+    border-radius: 0.15rem;
+    margin: 1.5rem;
+    padding: 1.5rem !important;
+    max-width: 22.5rem !important;
+    min-width: 15rem !important;
+    width: 100%;
+    background: $darkBlue;
+    p{
+
+    }
+    .row{
+        .review-profile{
+            img{
+                max-width: 2rem;
+                max-height: 2rem;
+                width: 100%;
+                border-radius: 50%;
+            }
+            .review-profile-text{
+                line-height: 0.6;
+                h3{
+                    font-family: $family1;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+                p{
+                    font-size: 0.65rem;
+                }
+            }
+        }
+    }
+}
+
+.early-access{
+    /*EARLY ACCESS SECTION*/
+    width: 100%;
+    .early-access-content{
+        background: $darkBlueIntroAndEmail;
+        border-radius:  0.4rem;
+        max-width: 54.063rem;
+    
+        .row{
+            .col{
+
+                h2{
+                    max-width: 21.938rem;
+                    width: 100%;
+                    font-size: 1.6rem;
+                    font-family: $family1;
+                    font-weight: 700;
+                }
+                p{
+                    max-width: 39.063rem;
+                    width: 100%;
+                    font-size: 0.875rem;
+                }               
+                
+            }      
+        }
+        form{
+            .row{
+                .col{
+                    label{
+                        width: 100%;
+                        input{
+                            margin-right: 1rem !important;
+                            width: 100% !important;
+                            color: black;
+                            padding: 0.5rem 2rem;
+                            border-radius: 3rem;
+                            border: 0;
+                            font-size: 0.875rem;
+                        }
+                    }           
+                    input[type="submit"]{
+                        font-size: 0.875rem;
+                        font-family: $family1;
+                        font-weight: 700;
+                        width: 100% !important;
+                        height: 100%;
+                        background: linear-gradient(to right, $cyan, $blue);
+                        padding: 0.5rem;
+                        border-radius: 3rem;
+                        border: 0;
+                        &:hover{
+                            font-weight: bold;
+                            background: hsla(176, 68%, 80%);               
+                        }
+                        &:focus{
+                            font-weight: bold;
+                            background: hsla(176, 68%, 80%);   
+                        }
+                    }
+                }
+            }           
+        }
+        .output{
+            padding: 0 2rem;
+            font-size: 0.75rem;
+            color: $lightRedError;
+        }
+    }
+}
+
+/*FOOTER*/
+.footer-icon{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.footer-link{
+    text-decoration: none;
+    color: $white;
+    font-family: $family1;
+    &:hover{
+        color: $white;
+        font-weight: bold;  
+    }
+    &:focus{
+        color: $white;
+        font-weight: bold;  
+    }
+}
+.email-text{
+    word-break: break-all;
+}
+.socials{
+    color: $white;
+    text-decoration: none;
+    .social-icon{
+        color: $white;
+        &:hover{
+            color: $cyan;
+            font-weight: bold;  
+        }
+        &:focus{
+            color: $cyan;
+            font-weight: bold;  
+        }
+    }
+}
+
+.fit-content{
+    width: fit-content !important;
+}
